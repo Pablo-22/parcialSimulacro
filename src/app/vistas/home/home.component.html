@@ -1,0 +1,52 @@
+<div class="main-container d-flex flex-column align-items-center gap-5">
+	<h1>Simulacro de parcial</h1>
+	<div class="d-flex flex-wrap gap-5 ">
+
+		<div class="app-card" [routerLink]="'/busqueda'">
+			<div class="d-flex flex-column justify-content-center">
+				<h4 class="app-card-title clr-blue">
+					Búsqueda
+				</h4>
+			  	Baja y modificación de películas
+			</div>
+		</div>
+
+		<div class="app-card" [routerLink]="'/pelicula/alta-pelicula'">
+			<div class="d-flex flex-column justify-content-center">
+				<h4 class="app-card-title clr-orange">
+					Alta película
+				</h4>
+			  	Añadir películas a la base de datos
+			</div>
+		</div>
+
+		<div class="app-card" [routerLink]="'/pelicula/listado-pelicula'">
+			<div class="d-flex flex-column justify-content-center">
+				<h4 class="app-card-title clr-violet">
+					Listado películas
+				</h4>
+				Visualizar todas las películas
+			</div>
+		</div>
+	</div>
+	<div class="d-flex flex-wrap gap-5 ">
+
+		<div class="app-card" [routerLink]="'/actor/listado-actor'">
+			<div class="d-flex flex-row align-items-center clr-violet">
+				<h4 class="app-card-title flex-grow-1">
+					Alta actores
+				</h4>
+			</div>
+				Añadir actores a la base de datos
+		</div>
+
+		<div class="app-card" [routerLink]="'/actor/listado-actor'">
+			<div class="d-flex flex-column justify-content-center">
+				<h4 class="app-card-title clr-orange">
+					Listado actores
+				</h4>
+				Visualizar todos los actores
+			</div>
+		</div>
+	</div>
+</div>

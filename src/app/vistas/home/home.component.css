@@ -1,0 +1,47 @@
+.main-container{
+	padding: 5rem;
+}
+
+.app-card{
+	width: 18rem;
+	min-height: 8rem;
+	border-radius: 16px;
+	padding: 1.4rem;
+	box-shadow: rgba(59, 59, 59, 0.667) 0px 1px 7px;
+}
+
+.app-card:hover{
+	box-shadow: rgba(15, 116, 123, 0.421) 0px 1px 8px;
+	cursor:pointer;
+}
+
+.app-card-title{
+	font-weight: 500;
+}
+
+.bg-blue{
+	background-color: rgb(21, 182, 194);
+	box-shadow: rgba(21, 183, 194, 0.667) 0px 3px 8px;
+}
+
+.bg-orange{
+	background-color: rgb(236, 200, 43);
+	box-shadow: rgba(226, 149, 26, 0.67) 0px 3px 8px;
+}
+
+.bg-violet{
+	background-color: rgb(94, 63, 210);
+	box-shadow: rgb(94, 63, 210, 0.67) 0px 3px 8px;
+}
+
+.clr-blue{
+	color: rgb(21, 182, 194);
+}
+
+.clr-orange{
+	color: rgb(236, 200, 43);
+}
+
+.clr-violet{
+	color: rgb(94, 63, 210);
+}
