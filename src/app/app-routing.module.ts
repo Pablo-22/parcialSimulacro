@@ -6,6 +6,10 @@ import { HomeComponent } from './vistas/home/home.component';
 const routes: Routes = [
 	
 	{ path: 'busqueda', component: BusquedaComponent },
+	
+	{ path: 'pelicula', loadChildren: () => import('./peliculas/module/peliculas.module').then(m => m.PeliculasModule) },
+	
+	{ path: 'actor', loadChildren: () => import('./actores/modules/actores.module').then(m => m.ActoresModule) },
 	{ path: '**', component: HomeComponent },
 ];
 

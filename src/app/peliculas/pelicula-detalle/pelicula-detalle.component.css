@@ -1,0 +1,44 @@
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    border: 1px solid rgba(0, 0, 0, .05);
+    border-radius: .375rem;
+    background-color: #fff;
+    background-clip: border-box;
+}
+
+.shadow {
+    box-shadow: 0 0 2rem 0 rgba(136, 152, 170, .15) !important;
+}
+
+.movie-card{
+	width: 40rem;
+}
+
+.movie-img{
+	width: 100%;
+	position: relative;
+    border-radius: .375rem;
+}
+
+.movie-img-container{
+	width: 100%;
+	height: 20rem;
+	background-image: linear-gradient(to left, rgba(0, 0, 0, 0.027), rgba(0, 0, 0, 0.838)), url('https://noescinetodoloquereluce.com/wp-content/uploads/2022/09/Avatar-1.jpg');
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; 
+
+    border-radius: .375rem;
+}
+
+.movie-title{
+	position: absolute;
+	bottom: 3rem;
+	left: 3rem;
+	color:white;
+}

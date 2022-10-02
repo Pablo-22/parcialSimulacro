@@ -1,0 +1,15 @@
+.scrollable{
+	padding-inline-end: 15px;
+	width: fit-content;
+	height: 20rem;
+	overflow-y: auto;
+}
+
+.list-item:hover{
+	background-color: aliceblue;
+}
+
+
+.list-item:focus{
+	background-color: rgb(235, 235, 235);
+}

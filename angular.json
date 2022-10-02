@@ -94,6 +94,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "parcialSimulacro:build:production",
+            "firebaseProject": "simulacroprimerparcial-ea412",
+            "firebaseHostingSite": "simulacroprimerparcial-cordoba-pablo"
+          }
         }
       }
     }

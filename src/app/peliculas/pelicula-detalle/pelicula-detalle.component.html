@@ -1,0 +1,30 @@
+<div class="card movie-card">
+	
+	<div *ngIf="true; else chooseAMovie" class="card-body">
+		<div class="movie-img-container card shadow">
+			<div class="d-flex flex-column me-5 p-5 mt-5 gap-2 align-items-baseline text-white" >
+				
+				<h1 class="" > 
+					{{ 'Avatar' }} 
+				</h1>
+				
+				<div class="d-inline-block"> Categoría: {{ 'Otros' }} </div>
+				
+				<div>
+					Estreno en <b>{{ '2002/02/20' | date: 'yyyy-MM-dd' }}</b> 
+				</div>
+		
+					<p class="card-text">
+					<b> {{ '8000' | number}} </b> Visualizaciones
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<ng-template #chooseAMovie>
+		<div class="container card card-stepper details-container d-flex justify-content-center align-items-center text-muted" style="width: 40rem; height: 20rem;">
+			<p>Detalle</p>
+			<h1>Seleccione una película</h1>
+		</div>
+	</ng-template>
+</div>

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "simulacroprimerparcial-ea412": {
+      "hosting": {
+        "parcialSimulacro": [
+          "simulacroprimerparcial-cordoba-pablo"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "simulacroprimerparcial-ea412"
+  }
+}
