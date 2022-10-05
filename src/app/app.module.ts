@@ -15,6 +15,7 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { PeliculaDetalleComponent } from './peliculas/pelicula-detalle/pelicula-detalle.component';
 import { PaisTablaComponent } from './paises/pais-tabla/pais-tabla.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,14 +24,18 @@ import { HttpClientModule } from '@angular/common/http';
     BusquedaComponent,
 	PeliculaAltaComponent,
  	PeliculaDetalleComponent,
-	PeliculaListadoComponent
-  ],
+	PeliculaListadoComponent,
+	ActorAltaComponent,
+	ActorListadoComponent,
+	PaisTablaComponent,
+],
   imports: [
     BrowserModule,
     AppRoutingModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
-	HttpClientModule
+	HttpClientModule,
+	ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

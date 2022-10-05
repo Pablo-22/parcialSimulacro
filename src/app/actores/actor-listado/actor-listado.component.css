@@ -144,6 +144,14 @@ th {
     text-align: inherit;
 }
 
+tbody > tr:hover {
+	background-color: #f6f4ff;
+}
+
+.active-row {
+	background-color: #f6f4ff;
+}
+
 button {
     border-radius: 0;
 }

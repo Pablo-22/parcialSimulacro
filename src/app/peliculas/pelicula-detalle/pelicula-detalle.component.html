@@ -1,21 +1,22 @@
 <div class="card movie-card">
 	
-	<div *ngIf="true; else chooseAMovie" class="card-body">
-		<div class="movie-img-container card shadow">
+	<div *ngIf="this.pelicula?.nombre; else chooseAMovie" class="card-body">
+		<div class="movie-img-container card shadow" 
+			[ngStyle]="{'background-image':this.obtenerFotoPelicula(this.pelicula)}">
 			<div class="d-flex flex-column me-5 p-5 mt-5 gap-2 align-items-baseline text-white" >
 				
 				<h1 class="" > 
-					{{ 'Avatar' }} 
+					{{ this.pelicula.nombre }} 
 				</h1>
 				
-				<div class="d-inline-block"> Categoría: {{ 'Otros' }} </div>
+				<div class="d-inline-block"> Categoría: {{ this.pelicula.tipo }} </div>
 				
 				<div>
-					Estreno en <b>{{ '2002/02/20' | date: 'yyyy-MM-dd' }}</b> 
+					Estreno en <b>{{ this.formatearFechaEstreno(this.pelicula) | date: 'dd-MM-yyyy' }}</b> 
 				</div>
 		
 					<p class="card-text">
-					<b> {{ '8000' | number}} </b> Visualizaciones
+					<b> {{ this.pelicula.cantidadPublico | number}} </b> Visualizaciones
 				</p>
 			</div>
 		</div>

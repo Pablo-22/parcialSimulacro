@@ -1,5 +1,5 @@
 <div class="m-3 d-flex flex-row gap-5">
-	<form  class="d-inline-flex card flex-column gap-3 card-body flex-wrap flex-grow-1">
+	<form [formGroup]="form"  class="d-inline-flex card flex-column gap-4 card-body flex-wrap flex-grow-1">
 
 		<h1 class="card-title align-self-center">Añadir actor</h1>
 		
@@ -19,23 +19,21 @@
 		</div>
 
 		<div class="d-flex flex-row flex-wrap gap-4">
-			<div class="d-flex flex-column flex-grow-1">
+			<div class="d-flex flex-column flex-fill">
 				<label> Fecha de nacimiento </label>
 				<input formControlName="fechaNacimiento" type="date" class="form-control">
 			</div>
-			<div class="d-flex flex-column flex-grow-1">
-				<label> Cantidad de películas </label>
-				<input formControlName="cantidadPeliculas" type="text" placeholder="Nombre" class="form-control">
+
+			<div class="d-flex flex-column flex-fill">
+				<label> Ciudad natal </label>
+				<input formControlName="ciudadNatal" type="text" placeholder="Nombre" class="form-control">
 			</div>
 		</div>
 
-		<div class="d-flex flex-column">
-			<label> Ciudad natal </label>
-			<input formControlName="ciudadNatal" type="text" placeholder="Nombre" class="form-control">
-		</div>
+		<button class="btn btn-primary w-50 align-self-center" (click)="this.guardarActor()"> Añadir </button>
 	</form>
 
 	<div class="flex-grow-1">
-		<app-pais-tabla></app-pais-tabla>
+		<app-pais-tabla (paisSeleccionado)="this.paisSeleccionado($event)"></app-pais-tabla>
 	</div>
 </div>

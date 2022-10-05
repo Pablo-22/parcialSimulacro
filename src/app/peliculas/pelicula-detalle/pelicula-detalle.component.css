@@ -28,7 +28,6 @@
 .movie-img-container{
 	width: 100%;
 	height: 20rem;
-	background-image: linear-gradient(to left, rgba(0, 0, 0, 0.027), rgba(0, 0, 0, 0.838)), url('https://noescinetodoloquereluce.com/wp-content/uploads/2022/09/Avatar-1.jpg');
 	background-size: cover;
     background-repeat: no-repeat;
     background-position: center center; 

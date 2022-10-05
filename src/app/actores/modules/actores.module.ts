@@ -9,8 +9,6 @@ import { ActorListadoComponent } from '../actor-listado/actor-listado.component'
 
 @NgModule({
   declarations: [
-	PaisTablaComponent,
-	ActorAltaComponent,
 ],
   imports: [
     CommonModule,

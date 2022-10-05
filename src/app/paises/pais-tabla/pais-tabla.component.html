@@ -1,6 +1,7 @@
 <div class="d-inline-flex flex-column">
 	<div class="d-flex flex-column gap-2 scrollable" style="width: 300px;">
-		<button *ngFor="let pais of paises" class="btn d-flex flex-row justify-content-center list-item" >
+		<button *ngFor="let pais of pageData" class="btn d-flex flex-row justify-content-center list-item"
+			(click)="this.onPaisSeleccionado(pais)" >
 			<div class="d-flex flex-column justify-content-center flex-grow-1" style="text-align: left;">
 				<span class="fw-bold"> {{ pais.name }} </span>
 				<span class="text-muted"> {{ pais.capital }} </span>
@@ -12,7 +13,7 @@
 	</div>
 
 	<div class="d-flex flex-row align-self-end gap-3">
-		<button class="btn btn-light mt-3" (click)="loadPage(false)"> < </button>
-		<button class="btn btn-light mt-3" (click)="loadPage(true)"> > </button>
+		<button class="btn btn-light mt-3" (click)="this.previousPage()"> < </button>
+		<button class="btn btn-light mt-3" (click)="this.nextPage()"> > </button>
 	</div>
 </div>

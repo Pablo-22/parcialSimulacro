@@ -1153,20 +1153,15 @@ a.text-light:focus {
 }
 
 .avatar {
-    font-size: 1rem;
-    display: inline-flex;
     width: 48px;
-    height: 48px;
     color: #fff;
     border-radius: 50%;
     background-color: #adb5bd;
-    align-items: center;
-    justify-content: center;
 }
 
 .avatar img {
     width: 100%;
-    border-radius: 50%;
+    border-radius: 10px;
 }
 
 .avatar-sm {

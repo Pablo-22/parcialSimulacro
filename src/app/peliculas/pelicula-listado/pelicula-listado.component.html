@@ -13,31 +13,31 @@
 
 
 		<tbody>
-			<tr>
+			<tr *ngFor="let pelicula of pageData; index as i" (click)="onPeliculaSeleccionada(pelicula)">
 				<th scope="row">
 					<div class="media align-items-center">
-					<a href="#" class="avatar rounded-circle mr-3">
-						<img alt="Image placeholder" src="https://raw.githack.com/creativetimofficial/argon-dashboard/gh-pages/assets-old/img/theme/bootstrap.jpg">
-					</a>
-					<div class="media-body">
-						<span class="mb-0 text-sm">Argon Design System</span>
-					</div>
+						<div class="avatar rounded-circle mr-3">
+							<img alt="Image placeholder" src="{{ pelicula.fotoPelicula }}">
+						</div>
+						<div class="media-body">
+							<span class="mb-0 text-sm"> {{ pelicula.nombre }} </span>
+						</div>
 					</div>
 				</th>
 				<td>
-					$2,500 USD
+					{{ pelicula.tipo }} 
 				</td>
 				<td>
 					<span class="badge badge-dot mr-4 text-black">
-						<i class="bg-warning"></i> 20/02/2002
+						<i class="bg-warning"></i>  {{ this.formatearFechaEstreno(pelicula) | date: 'yyyy-MM-dd' }} 
 					</span>
 				</td>
 				<td>
 					<div class="d-flex align-items-center">
-					<span class="mr-2">60%</span>
+					<span class="mr-2"> {{ pelicula.cantidadPublico }} </span>
 					<div>
-						<div class="progress">
-						<div class="progress-bar bg-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+						<div>
+							<i class="fas fa-user-friends" style="color:#5e72e4"></i>
 						</div>
 					</div>
 					</div>
@@ -52,14 +52,14 @@
 	<div class="card-footer py-4">
 		<nav aria-label="...">
 		<ul class="pagination justify-content-end mb-0">
-			<li class="page-item disabled">
-			<a class="page-link" href="#" tabindex="-1">
+			<li class="page-item">
+			<a class="page-link" (click)="this.previousPage()" tabindex="-1">
 				<i class="fas fa-angle-left"></i>
 				<span class="sr-only">Previous</span>
 			</a>
 			</li>
-			<li class="page-item active">
-			<a class="page-link" href="#">
+			<li class="page-item">
+			<a class="page-link" (click)="this.nextPage()">
 				<i class="fas fa-angle-right"></i>
 				<span class="sr-only">Next</span>
 			</a>
